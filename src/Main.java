@@ -4,4 +4,5 @@ public class Main
         {
         System.out.println("Hello world!");
         }
+        System.out.print("Введите число, первые 4 степени которого хотите узнать: ");
 }
