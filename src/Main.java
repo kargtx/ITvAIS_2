@@ -100,5 +100,56 @@ class EnterF extends JFrame {
         JF.setVisible(true);
         JF.setResizable(false);
 
+        bt.addActionListener
+                (
+                        //тут проверка корректности ввода и значений и запуск расчета
+                        new ActionListener()
+                        {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                try
+                                {
+                                    //считывание значений из полей
+                                    b = Integer.valueOf(Tf.getText());
+                                    x1 = Double.valueOf(Tx1.getText());
+                                    x2 = Double.valueOf(Tx2.getText());
+                                    if (x1 < 0)
+                                    {
+                                        set("Ошибка! Минимальное значение счетчика 0");
+                                        return;
+                                    }
+                                    if (b <= 0)
+                                    {
+                                        set("Ошибка! Электроэнергия не может быть <= 0");
+                                        return;
+                                    }
+
+                                    if (x1 < x2)
+                                    {
+                                        try
+                                        {
+                                            set("К оплате по счету за электроэнергию: " + String.valueOf(calc(b, x1, x2)) + " у.е.");
+                                            bt2.setVisible(true);
+
+                                        }
+                                        catch (Exception w3)
+                                        {
+                                            set("Ошибка");
+                                            System.out.println(w3);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        set("Ошибка! Некорректные значения");
+                                    }
+                                }
+                                catch (Exception e1)
+                                {
+                                    set("Ошибка! Некорректный формат данных");
+                                }
+                            }
+                        }
+                );
+
     }
 }
