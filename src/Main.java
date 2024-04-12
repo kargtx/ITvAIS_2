@@ -150,6 +150,30 @@ class EnterF extends JFrame {
                             }
                         }
                 );
-
+        bt2.addActionListener
+                (
+                        //сохраняем значения
+                        new ActionListener()
+                        {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Tx1.setText(Tx2.getText());
+                                Tx2.setText("");
+                            }
+                        }
+                );
     }
+
+    //расчитываем стоимость израсходованной электроэнергии
+    double calc(double b, double x1, double x2)
+    {
+        return (x2 - x1) * b;
+    }
+
+    //вывод ответа в грвфический интерфейс пользователя
+    void set(String s)
+    {
+        answ.setText(s);
+    }
+
 }
