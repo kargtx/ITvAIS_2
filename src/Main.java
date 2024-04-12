@@ -34,5 +34,6 @@ class EnterF extends JFrame {
     Font font = new Font("default", Font.BOLD, 15);
 
     EnterF() {
+        //dsjfkjdsjfksd
     }
 }
