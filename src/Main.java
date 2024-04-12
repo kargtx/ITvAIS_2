@@ -4,7 +4,7 @@ public class Main
         {
         System.out.println("Hello world!");
         System.out.println("Введите число, первые 4 степени которого хотите узнать: ");
-        system.out.println("здарова пацаны")
+        system.out.println("здарова пацаны");
         }
 
 }
