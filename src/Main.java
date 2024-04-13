@@ -51,7 +51,7 @@ class EnterF extends JFrame {
 
         //задание координат и начальных значений для текстовых полей и кнопок
         //текстовое поле для кВ*ч
-        Tf = new TextField("4,01");
+        Tf = new TextField("4.01");
         Tf.setLocation(220, 20);
         Tf.setSize(50, 20);
         JP.add(Tf);
